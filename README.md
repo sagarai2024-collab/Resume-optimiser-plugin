@@ -6,7 +6,7 @@ One skill and five commands, for the documents a stranger skims before deciding 
 
 A resume, a LinkedIn profile, a GitHub profile README and a project README do the same job and fail the same way. The writing describes activity that a hundred other people or projects could also claim. Adding a language model to the draft makes it worse, because a model reaches for the phrasing that fits the widest range of subjects, and width is the whole problem.
 
-**`profile-optimiser`** runs two tests over every line. The substitution test asks whether the line would still be true if you swapped in someone else with a similar background, or another project in the same category. The evidence test asks whether there is a number, a named scale, a named system or a mechanism under the claim. A line that fails both is a rewrite. A line that fails one is an upgrade. A line that passes both stays, even if it reads a little rough.
+**`resume-optimiser`** runs two tests over every line. The substitution test asks whether the line would still be true if you swapped in someone else with a similar background, or another project in the same category. The evidence test asks whether there is a number, a named scale, a named system or a mechanism under the claim. A line that fails both is a rewrite. A line that fails one is an upgrade. A line that passes both stays, even if it reads a little rough.
 
 It diagnoses before it rewrites, never writes a number the person did not supply, and holds its own output to the anti-AI-tell gate so the result does not read as generated. When the request is ambiguous, it audits first. An unrequested rewrite of writing that was already working is the worst outcome the skill can produce.
 
@@ -27,18 +27,18 @@ From this repository, in Claude Code:
 
 ```
 /plugin marketplace add sagarai2024-collab/Resume-optimiser-plugin
-/plugin install profile-optimiser@profile-optimiser
+/plugin install resume-optimiser@resume-optimiser
 ```
 
 Or clone it and add the folder as a local marketplace:
 
 ```
-git clone https://github.com/sagarai2024-collab/Resume-optimiser-plugin.git profile-optimiser
+git clone https://github.com/sagarai2024-collab/Resume-optimiser-plugin.git resume-optimiser
 ```
-Clone into a folder named `profile-optimiser` so `scripts/validate_skill.py` passes: it checks that the folder name matches the plugin name.
+Clone into a folder named `resume-optimiser` so `scripts/validate_skill.py` passes: it checks that the folder name matches the plugin name.
 ```
-/plugin marketplace add ./profile-optimiser
-/plugin install profile-optimiser@profile-optimiser
+/plugin marketplace add ./resume-optimiser
+/plugin install resume-optimiser@resume-optimiser
 ```
 
 You can also drop a packaged `.plugin` file into Claude and accept it.
@@ -85,9 +85,9 @@ The pattern numbering, the final gate, the do-no-harm rule and the evidence disc
 
 ## The package
 
-`.claude-plugin/` holds plugin.json, the single source of truth for name, version and author, and marketplace.json, which makes this repo installable as a marketplace. `commands/` holds the five commands: `/profile-optimiser:audit` to diagnose without a rewrite, `/profile-optimiser:resume` for bullets and the highlight reel, `/profile-optimiser:linkedin` for the headline, About and experience, `/profile-optimiser:readme` for a project or profile README, and `/profile-optimiser:talk-track` for what you say when asked.
+`.claude-plugin/` holds plugin.json, the single source of truth for name, version and author, and marketplace.json, which makes this repo installable as a marketplace. `commands/` holds the five commands: `/resume-optimiser:audit` to diagnose without a rewrite, `/resume-optimiser:resume` for bullets and the highlight reel, `/resume-optimiser:linkedin` for the headline, About and experience, `/resume-optimiser:readme` for a project or profile README, and `/resume-optimiser:talk-track` for what you say when asked.
 
-`skills/profile-optimiser/` holds `SKILL.md` for the modes, formula, evidence discipline and gate, and a `references/` with five files: `surfaces.md` for per-surface conventions and failure modes, `evidence-interview.md` for the question banks, estimates and confidential figures, `ai-tells.md` for the profile-specific tells numbered to `humanise`, `audit-report.md` for the audit output contract and a worked example, and `talk-track.md` for the spoken contract, time boxes and pushback. Alongside them sit `hosts/openai.yaml` for optional UI metadata on OpenAI hosts, `scripts/validate_skill.py` for the structural validator, `evals/` with 12 cases, each with prompt and graders, and README.md, CHANGELOG.md and LICENSE. No `.mcp.json`, no `hooks/`, no `settings.json`, no `bin/`. Nothing here needs a connector, a hook or a binary.
+`skills/resume-optimiser/` holds `SKILL.md` for the modes, formula, evidence discipline and gate, and a `references/` with five files: `surfaces.md` for per-surface conventions and failure modes, `evidence-interview.md` for the question banks, estimates and confidential figures, `ai-tells.md` for the profile-specific tells numbered to `humanise`, `audit-report.md` for the audit output contract and a worked example, and `talk-track.md` for the spoken contract, time boxes and pushback. Alongside them sit `hosts/openai.yaml` for optional UI metadata on OpenAI hosts, `scripts/validate_skill.py` for the structural validator, `evals/` with 12 cases, each with prompt and graders, and README.md, CHANGELOG.md and LICENSE. No `.mcp.json`, no `hooks/`, no `settings.json`, no `bin/`. Nothing here needs a connector, a hook or a binary.
 
 ```
 python3 scripts/validate_skill.py

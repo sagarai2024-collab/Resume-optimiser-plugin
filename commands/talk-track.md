@@ -3,7 +3,7 @@ description: Turn a line on your profile into what you actually say when someone
 argument-hint: "[the line or project, who is asking, how long you have]"
 ---
 
-Use the `profile-optimiser` skill in talk track mode. Read the talk track reference before writing.
+Use the `resume-optimiser` skill in talk track mode. Read the talk track reference before writing.
 
 Return speech, not an essay about communication. Main point in one answer-first sentence, three to five spoken lines usable verbatim, the supplied proof under each, the likely pushback with one direct response, and a close. Fit the time box if one is given: 30 seconds for a recruiter screen, 2 minutes for a standard interview answer.
 

@@ -3,7 +3,7 @@ description: Rewrite a LinkedIn headline, About section or experience entries
 argument-hint: "[paste the headline and About section, and say who you want to be found by]"
 ---
 
-Use the `profile-optimiser` skill in rewrite mode, on the LinkedIn surface. Read the LinkedIn section of the surface guide first.
+Use the `resume-optimiser` skill in rewrite mode, on the LinkedIn surface. Read the LinkedIn section of the surface guide first.
 
 LinkedIn is the one surface where voice is an asset. Write the About section in first person, put the point in the first two lines because the rest is hidden behind the cut, and keep the writer's opinions, bluntness and specifics instead of flattening them into a professional register.
 

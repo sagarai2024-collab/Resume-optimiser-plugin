@@ -3,7 +3,7 @@ description: Score a resume, LinkedIn profile or README and name what is wrong, 
 argument-hint: "[paste the document, or name a file, and say which surface it is]"
 ---
 
-Use the `profile-optimiser` skill in audit mode. Do not rewrite the text.
+Use the `resume-optimiser` skill in audit mode. Do not rewrite the text.
 
 Identify the surface first (resume, LinkedIn, GitHub profile README, project README) and read the matching section of the surface guide before judging anything against convention.
 

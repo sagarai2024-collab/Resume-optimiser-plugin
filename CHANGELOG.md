@@ -4,7 +4,7 @@
 
 First release.
 
-- `profile-optimiser` skill with three modes: audit, rewrite, talk track.
+- `resume-optimiser` skill with three modes: audit, rewrite, talk track.
 - Four surfaces: resume, LinkedIn, GitHub profile README, project README, each with its own conventions, length bands and failure modes.
 - The two tests (substitution, evidence) as the single diagnostic running through every mode.
 - Line formula, verb rules, length bands, skim test, highlight reel structure, tailored header.

@@ -3,7 +3,7 @@ description: Fix a project README or a GitHub profile README so a stranger gets 
 argument-hint: "[paste the README or name the file, and say who the intended reader is]"
 ---
 
-Use the `profile-optimiser` skill in rewrite mode, on the README surface. Read the README sections of the surface guide first, and say which of the two surfaces this is before writing.
+Use the `resume-optimiser` skill in rewrite mode, on the README surface. Read the README sections of the surface guide first, and say which of the two surfaces this is before writing.
 
 For a project README, the first thirty seconds have to carry: what it does in one plain sentence naming the problem, who it is for and who it is not for, the smallest example that actually runs, and the maintenance status. Philosophy, design principles and comparisons go below that.
 

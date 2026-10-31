@@ -3,7 +3,7 @@ description: Rewrite resume bullets and the highlight reel against a target role
 argument-hint: "[paste the resume, plus the target job description if you have one]"
 ---
 
-Use the `profile-optimiser` skill in rewrite mode, on the resume surface.
+Use the `resume-optimiser` skill in rewrite mode, on the resume surface.
 
 Confirm scope (highlight reel, experience section, or both) and ask for the target job description before writing. Diagnose every line against the substitution test and the evidence test, categorise the document as strong, mixed or task only, and run the evidence interview for anything with no measurable outcome.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the profile-optimiser plugin package. No third-party dependencies.
+"""Validate the resume-optimiser plugin package. No third-party dependencies.
 
 Run from anywhere:  python3 scripts/validate_skill.py
 """
@@ -20,7 +20,7 @@ FRONTMATTER_KEYS = {"name", "description", "metadata", "allowed-tools", "license
 MANIFEST = ROOT / ".claude-plugin" / "plugin.json"
 
 SKILLS = {
-    "profile-optimiser": {
+    "resume-optimiser": {
         "required": [
             "references/surfaces.md",
             "references/evidence-interview.md",
@@ -50,7 +50,7 @@ SKILLS = {
 }
 
 REFERENCE_MARKERS = {
-    "skills/profile-optimiser/references/surfaces.md": [
+    "skills/resume-optimiser/references/surfaces.md": [
         "Resume",
         "LinkedIn",
         "GitHub profile README",
@@ -58,7 +58,7 @@ REFERENCE_MARKERS = {
         "Cross-surface consistency",
         "Protected content",
     ],
-    "skills/profile-optimiser/references/evidence-interview.md": [
+    "skills/resume-optimiser/references/evidence-interview.md": [
         "Question banks by line type",
         "When they are stuck",
         "Estimates",
@@ -66,19 +66,19 @@ REFERENCE_MARKERS = {
         "Placeholders",
         "Fast mode",
     ],
-    "skills/profile-optimiser/references/ai-tells.md": [
+    "skills/resume-optimiser/references/ai-tells.md": [
         "Not X but Y",
         "Forced triads",
         "When a tell is not a tell",
         "P5",
     ],
-    "skills/profile-optimiser/references/audit-report.md": [
+    "skills/resume-optimiser/references/audit-report.md": [
         "Working already",
         "Biggest single lift",
         "No rewriting in audit mode",
         "Scoring",
     ],
-    "skills/profile-optimiser/references/talk-track.md": [
+    "skills/resume-optimiser/references/talk-track.md": [
         "Main point",
         "Say this",
         "Pushback",
@@ -219,7 +219,7 @@ def check_references(errors: list[str]) -> None:
             if marker not in text:
                 errors.append(f"{relative} is missing marker: {marker}")
 
-    tells = ROOT / "skills/profile-optimiser/references/ai-tells.md"
+    tells = ROOT / "skills/resume-optimiser/references/ai-tells.md"
     if tells.is_file():
         found = len(re.findall(r"^\*\*P\d+\.", tells.read_text(encoding="utf-8"), re.MULTILINE))
         if found != EXPECTED_PROFILE_PATTERNS:
@@ -241,7 +241,7 @@ def check_commands(errors: list[str]) -> None:
             errors.append(f"commands/{filename}: frontmatter needs a description")
         if "$ARGUMENTS" not in text:
             errors.append(f"commands/{filename}: must pass $ARGUMENTS through to the skill")
-        if "profile-optimiser" not in text:
+        if "resume-optimiser" not in text:
             errors.append(f"commands/{filename}: must name the skill it invokes")
 
 
