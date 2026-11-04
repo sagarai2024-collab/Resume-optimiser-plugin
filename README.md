@@ -95,4 +95,4 @@ python3 scripts/validate_skill.py
 
 ## Licence
 
-MIT; see [LICENSE](LICENSE). Author: Sagarika Chakraborty. Version lives in `.claude-plugin/plugin.json`.
+All rights reserved, see [LICENSE](LICENSE). Do not copy or reuse without written permission. Author: Sagarika Chakraborty. Version lives in `.claude-plugin/plugin.json`.
